@@ -27,7 +27,7 @@ async function sendAlert(alert) {
         source: 'GitHub Actions',
         severity: 'critical',
         custom_details: {
-          run_details: `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+          run_details: `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
           related_commits: context.payload.commits
             ? context.payload.commits.map((commit) => `${commit.message}: ${commit.url}`).join(', ')
             : 'No related commits',
