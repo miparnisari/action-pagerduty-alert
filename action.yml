@@ -7,6 +7,9 @@ inputs:
   pagerduty-dedup-key:
     description: 'The key used to correlate PagerDuty triggers, acknowledges, and resolves for the same alert.'
     required: false
+  incident-severity:
+    description: 'The severity of the incident occured'
+    required: false  
   incident-summary:
     description: 'A custom summary for your PagerDuty alert'
     required: false

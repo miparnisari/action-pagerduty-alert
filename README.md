@@ -24,6 +24,10 @@ More documentation is available [here](https://developer.pagerduty.com/docs/even
 
 **Optional:** a custom summary for your PagerDuty alert
 
+`incident-severity`
+
+**Optional:** the severity of the incident
+
 `incident-region`
 
 **Optional:** the region where the incident occurred

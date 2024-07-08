@@ -37,6 +37,11 @@ async function sendAlert(alert) {
       event_action: 'trigger',
     };
 
+    const customSeverity = core.getInput('incident-severity');
+    if (customSeverity != '') {
+      alert.payload.severity = customSeverity;
+    }
+
     const customSummary = core.getInput('incident-summary');
     if (customSummary != '') {
       alert.payload.summary = customSummary;
